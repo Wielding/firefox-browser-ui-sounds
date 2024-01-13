@@ -1,0 +1,159 @@
+:root {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+h1 {
+    font-size: 1em;
+    font-weight: 500;
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+h5 {
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+h6 {
+    margin: 0;
+    text-align: center;
+}
+
+button {
+    background-color: #cf7506;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    width: 100%;
+
+    &:hover {
+        background-color: #10a34d;
+    }
+}
+
+.extension-title {
+    background-color: rgb(102, 102, 102);
+    border: 1px solid black;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.right {
+    float: right;
+    width: 48%;
+}
+
+.left {
+    float: left;
+    width: 48%;
+}
+
+.custom-only {
+    display: none;
+}
+
+.popup-only {
+    display: block;
+}
+
+.page-only {
+    display: none;
+}
+
+.radio-box {
+    width: 300px;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.spacer-20 {
+    margin-top: 20px;
+    height: 20;
+    content: "&nbsp;";
+}
+
+input[type="text"] {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid black;
+    display: block;
+    box-sizing: border-box
+}
+
+.button-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 500px) {
+
+    body {
+        width: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        margin-top: 20px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .radio-box {
+        width: auto;
+    }
+
+    .spacer-20 {
+        margin: 0;
+        height: 0;
+    }
+
+    .right {
+        float: left;
+        width: auto;
+    }
+
+    .left {
+        width: auto;
+    }
+
+    .popup-only {
+        display: none;
+    }
+
+    .page-only {
+        display: block;
+    }
+}

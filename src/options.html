@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser UI Sounds Options</title>
+    <link rel="stylesheet" href="options.scss" />
+    <script type="module" src="options.ts"></script>
+</head>
+
+<body>
+    <div class="extension-title">
+        <h1>Browser UI Sounds</h1>
+    </div>
+
+    <h4>Select your sound</h4>
+    <div class="radio-box">
+        <input id="cb-audio-default" type="radio" name="sound-source" title="Default">
+        <label for="Default">Default</label>
+        <br />
+
+        <input id="cb-audio-nostromo" type="radio" name="sound-source" title="Nostromo">
+        <label for="Nostramo">Nostramo</label>
+        <br />
+
+        <input id="cb-audio-custom" type="radio" name="sound-source" title="Custom">
+        <label for="Nostramo">Custom</label>
+    </div>
+
+    <div class="custom-only">
+        <br />
+        <label for="custom-created-url">Tab created URL</label>
+        <br />
+        <input id="custom-created-url" type="text" name="custom-created-url" title="Custom URL for tab created sound">
+
+        <br />
+        <label for="custom-updated-url">Tab updated URL</label>
+        <br />
+        <input id="custom-updated-url" type="text" name="custom-updated-url" title="Custom URL for tab updated sound">
+
+        <br />
+        <label for="custom-removed-url">Tab removed URL</label>
+        <br />
+        <input id="custom-removed-url" type="text" name="custom-removed-url" title="Custom URL for tab removed sound">
+
+        <br />
+        <label for="custom-switched-url">Tab switched URL</label>
+        <br />
+        <input id="custom-switched-url" type="text" name="custom-switched-url"
+            title="Custom URL for tab switched sound">
+
+    </div>
+
+
+    <h4>Select your options</h4>
+    <div>
+        <label for="minimize-sounds">
+            <input id="minimize-sounds" type="checkbox" name="minimize-sounds" value="local"
+                title="Play fewer sounds per event">
+            Minimize Sounds</label>
+    </div>
+
+    <div>
+        <label for="speak-tab-names">
+            <input id="speak-tab-names" type="checkbox" name="speak-tab-names" value="local"
+                title="Say tab name when focused">
+            Say tab name on focus</label>
+    </div>
+
+
+    <div>
+        <label for="sync-settings">
+            <input id="sync-settings" type="checkbox" name="sync-settings" value="false"
+                title="Sync settings online across browsers">
+            Sync settings</label>
+    </div>
+
+
+    <div>
+        <label for="debug">
+            <input id="debug" type="checkbox" name="debug" value="false" title="Enable console logging">
+            Debug to console</label>
+
+    </div>
+
+
+    <div class="popup-only button-bar">
+        <div class="left"><button type="button" id="close-button">Close</button></div>
+        <div class="right"><button type="button" id="open-button">Settings</button></div>
+    </div>
+
+    <div class="spacer-20"></div>
+
+    <div class="page-only">
+        <h5>Brought to you by <a href="https://wielding.dev">Wielding Logic</a></h5>
+        <h6>Version: <span id="version"></span></h6>
+    </div>
+</body>
+
+</html>

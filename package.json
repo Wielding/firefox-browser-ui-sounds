@@ -1,0 +1,31 @@
+{
+  "name": "browser-ui-sounds",
+  "version": "1.0.0",
+  "description": "Provides sounds for Tab UI events",
+  "author": "Wielding Logic",
+  "license": "MIT",
+  "type": "module",
+  "targets": {
+    "default": {
+      "sourceMap": {
+        "inline": true
+      }
+    }
+  },
+  "scripts": {
+    "clean": "yarn rimraf dist",
+    "build": "yarn clean && yarn parcel build src/manifest.json --config @parcel/config-webextension",
+    "start": "yarn clean && yarn parcel serve src/manifest.json --config @parcel/config-webextension"
+  },
+  "devDependencies": {
+    "@parcel/config-webextension": "^2.11.0",
+    "@parcel/core": "^2.11.0",
+    "@parcel/transformer-sass": "2.11.0",
+    "@types/chrome": "^0.0.200",
+    "parcel": "^2.11.0",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "@types/firefox-webext-browser": "^120.0.0"
+  }
+}
