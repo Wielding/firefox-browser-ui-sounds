@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 2023-01-15 - 0.0.12
+* refactoring
+* style changes
+
 ### 2023-01-15 - 0.0.11
 * added input focus hint
 * some style changes
