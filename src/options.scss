@@ -57,7 +57,7 @@ fieldset {
 }
 
 .extension-title {
-    background-color: rgb(102, 102, 102);
+    background-color: rgb(57, 87, 151);
     border: 1px solid black;
     color: white;
     border-radius: 3px;
@@ -101,6 +101,11 @@ input[type="text"] {
     display: block;
     box-sizing: border-box
 }
+
+input:focus {
+    outline: 2px solid royalblue;
+    // box-shadow: 1px 1px 1px 1px rgb(83, 179, 126);
+  }
 
 .button-bar {
     margin-top: 20px;

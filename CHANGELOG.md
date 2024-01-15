@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### ?????????? - 0.0.11
+* added input focus hint
+* some style changes
+* added more icon resolutions
+
 ### 2023-01-15 - 0.0.10
 * removed unnecessary permissions
 * revert back to manifest v2
