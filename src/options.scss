@@ -52,6 +52,10 @@ button {
     }
 }
 
+fieldset {
+    border-radius: 3px;
+}
+
 .extension-title {
     background-color: rgb(102, 102, 102);
     border: 1px solid black;
@@ -82,14 +86,6 @@ button {
 
 .page-only {
     display: none;
-}
-
-.radio-box {
-    width: 300px;
-    padding: 5px;
-    display: inline-block;
-    border-radius: 3px;
-    border: 1px solid black;
 }
 
 .spacer-20 {
@@ -129,10 +125,6 @@ input[type="text"] {
 
     input[type="text"] {
         width: 100%;
-    }
-
-    .radio-box {
-        width: auto;
     }
 
     .spacer-20 {

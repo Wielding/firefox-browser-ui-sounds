@@ -1,7 +1,7 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Browser UI Sounds",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "browser_specific_settings": {
     "gecko": {
       "id": "andrew@wielding.net"
@@ -12,18 +12,18 @@
       "background.ts"
     ]
   },
-  "browser_action": {
-    "default_title": "MyPopup",
-    "default_popup": "options.html?popup=true"
+  "action": {
+    "default_icon": {
+      "128": "assets/icons/icon_128x128-32.png",
+      "16": "assets/icons/icon_16x16-32.png",
+      "32": "assets/icons/icon_32x32-32.png"
+    },
+    "default_title": "Browser UI Sounds",
+    "default_popup": "options.html"
   },
   "options_ui": {
-    "page": "options.html?options=true",
+    "page": "options.html",
     "open_in_tab": false
-  },
-  "icons": {
-    "128": "assets/icons/icon_128x128-32.png",
-    "16": "assets/icons/icon_16x16-32.png",
-    "32": "assets/icons/icon_32x32-32.png"
   },
   "permissions": [
     "storage",
