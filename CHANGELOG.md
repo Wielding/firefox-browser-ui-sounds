@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 2023-01-15 - 0.0.10
+* removed unnecessary permissions
+* revert back to manifest v2
+  
 ### 2023-01-15 - 0.0.8
 * switched to manifest v3
 * moved all options to fieldsets
