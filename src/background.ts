@@ -6,6 +6,13 @@ const audioUrls = [
   NostromoAudioUrls
 ];
 
+enum TabEvent {
+  Switch,
+  Update,
+  Create,
+  Remove
+}
+
 const { tabs } = chrome;
 
 let tabSwitchAudio = new Audio();
@@ -30,7 +37,7 @@ function loadSounds() {
 }
 
 /// Play the sound with the given name
-async function playSound(name: string) {
+async function playSound(tabEvent: TabEvent) {
 
   /// If the user has chosen to minimize sounds, don't play the sound if the
   /// previous sound was created or removed
@@ -43,18 +50,18 @@ async function playSound(name: string) {
 
   let audio: HTMLAudioElement;
 
-  switch (name) {
-    case "tabSwitch":
+  switch (tabEvent) {
+    case TabEvent.Switch:
       audio = tabSwitchAudio;
       break;
-    case "tabUpdated":
+    case TabEvent.Update:
       audio = tabUpdatedAudio;
       break;
-    case "tabCreated":
+    case TabEvent.Create:
       audio = tabCreatedAudio;
       suppressNextSound = true;
       break;
-    case "tabRemoved":
+    case TabEvent.Remove:
       audio = tabRemovedAudio;
       suppressNextSound = true;
       break;
@@ -63,7 +70,7 @@ async function playSound(name: string) {
   }
 
   /// If the user has chosen to speak the tab names, do so
-  if (Configuration.speakTabNames && name == "tabSwitch") {
+  if (Configuration.speakTabNames && tabEvent == TabEvent.Switch) {
     let tabName = "";
 
     if (window.speechSynthesis.speaking) {
@@ -79,11 +86,6 @@ async function playSound(name: string) {
 
     if (tabName.length > 0 && tabName != "New Tab") {
       let utterance = new SpeechSynthesisUtterance(tabName);
-
-      // utterance.lang = "en-US";
-      // utterance.volume = 1;
-      // utterance.rate = 1;
-      // utterance.pitch = 1;
       window.speechSynthesis.speak(utterance);
     }
   }
@@ -106,19 +108,19 @@ Configuration.load().then(async () => {
   console.log("Loading configuration for Background");
 
   tabs.onActivated.addListener(async (event) => {
-    playSound("tabSwitch")
+    playSound(TabEvent.Switch)
   });
 
   tabs.onUpdated.addListener(async () => {
-    playSound("tabUpdated")
+    playSound(TabEvent.Update)
   });
 
   tabs.onCreated.addListener(async () => {
-    playSound("tabCreated")
+    playSound(TabEvent.Create)
   });
 
   tabs.onRemoved.addListener(async () => {
-    playSound("tabRemoved")
+    playSound(TabEvent.Remove)
   });
 
   /// Listen for changes to the configuration and reload the sounds if necessary
@@ -128,8 +130,3 @@ Configuration.load().then(async () => {
   });
 
 });
-
-
-
-
-

@@ -107,4 +107,3 @@ class ConfigurationManager {
 }
 
 export let Configuration = new ConfigurationManager();
-

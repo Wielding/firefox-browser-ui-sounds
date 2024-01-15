@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Browser UI Sounds",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "browser_specific_settings": {
     "gecko": {
       "id": "andrew@wielding.net"
@@ -13,7 +13,7 @@
     ]
   },
   "browser_action": {
-    "default_title": "MyPopup",
+    "default_title": "Browser UI Sounds",
     "default_popup": "options.html"
   },
   "options_ui": {
