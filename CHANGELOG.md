@@ -1,6 +1,6 @@
 # CHANGELOG
 
-### ?????????? - 0.0.11
+### 2023-01-15 - 0.0.11
 * added input focus hint
 * some style changes
 * added more icon resolutions
