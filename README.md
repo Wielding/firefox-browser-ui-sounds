@@ -35,7 +35,7 @@ $ ```yarn build```
 
 # Credits
 
-All sounds were provided by Andre Louis who retains all rights and has graciously provided them for use in this extension.
+All sounds were graciously provided by Andre Louis who retains all rights.
 
 You can check out his music and other work at https://youtube.com/TheOnjLouis.
 
