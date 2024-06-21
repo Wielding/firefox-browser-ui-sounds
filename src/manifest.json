@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Browser UI Sounds",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "browser_specific_settings": {
     "gecko": {
       "id": "andrew@wielding.net"
